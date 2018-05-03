@@ -1,0 +1,33 @@
+image: python:3.5
+
+variables:
+  PYPI_USER: SECURE
+  PYPI_PASSWORD: SECURE
+
+stages:
+  - deploy
+  - cleanup
+
+deploy_pypi:
+  stage: deploy
+  script:
+    - echo "[server-login]" >> ~/.pypirc
+    - echo "username=" ${PYPI_USER} >> ~/.pypirc
+    - echo "password=" ${PYPI_PASSWORD} >> ~/.pypirc
+    - python3 setup.py check sdist upload -r pypi
+    - python3 setup.py bdist_wheel upload
+    - echo "" > ~/.pypirc && rm ~/.pypirc
+  only:
+    - /^v\d+\.\d+\.\d+([abc]\d*)?$/  # PEP-440 compliant
+  except:
+    - branches
+
+cleanup_deploy:
+  stage: cleanup
+  when: always
+  script:
+    - rm -vf ~/.pypirc
+  only:
+    - /^v\d+\.\d+\.\d+([abc]\d*)?$/  # PEP-440 compliant
+  except:
+    - branches
