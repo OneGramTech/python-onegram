@@ -11,14 +11,14 @@ except LookupError:
     ascii = codecs.lookup('ascii')
     codecs.register(lambda name, enc=ascii: {True: enc}.get(name == 'mbcs'))
 
-VERSION = '0.0.1'
+VERSION = '1.0.0'
 
 setup(
     name='onegramcoin',
     version=VERSION,
     description='Python library for onegram',
     long_description=open('README.md').read(),
-	download_url='https://gitlab.com/onegram-developers/python-onegram/-/archive/' + VERSION + '/python-onegram-' + VERSION + '.zip',
+	download_url='https://gitlab.com/onegram-developers/python-onegram/-/archive/v' + VERSION + '/python-onegram-v' + VERSION + '.zip',
     author='Frantisek Horvath',
     author_email='frantisek.horvath@01cryptohouse.com',
     maintainer='Frantisek Horvath',
@@ -40,7 +40,7 @@ setup(
         'Topic :: Office/Business :: Financial',
     ],
     install_requires=[
-        "onegramlib>=1.0.3",
+        "onegramlib>=1.0.4",
         "websockets",
         "appdirs",
         "Events",
