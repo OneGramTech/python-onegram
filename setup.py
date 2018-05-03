@@ -14,7 +14,7 @@ except LookupError:
 VERSION = '0.0.1'
 
 setup(
-    name='onegram',
+    name='onegramcoin',
     version=VERSION,
     description='Python library for onegram',
     long_description=open('README.md').read(),
