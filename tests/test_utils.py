@@ -1,4 +1,4 @@
-from bitshares.utils import assets_from_string
+from onegram.utils import assets_from_string
 
 
 def test_assets_from_string():

@@ -1,9 +1,9 @@
 
 import unittest
 from bitshares import BitShares
-from bitshares.asset import Asset
-from bitshares.instance import set_shared_bitshares_instance, SharedInstance
-from bitshares.blockchainobject import BlockchainObject
+from onegram.asset import Asset
+from onegram.instance import set_shared_bitshares_instance, SharedInstance
+from onegram.blockchainobject import BlockchainObject
 
 import logging
 log = logging.getLogger()

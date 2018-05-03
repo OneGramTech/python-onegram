@@ -48,7 +48,7 @@ def set_shared_blockchain_instance(bitshares_instance):
     """ This method allows us to override default bitshares instance for all
         users of ``SharedInstance.instance``.
 
-        :param bitshares.bitshares.BitShares bitshares_instance: BitShares
+        :param onegram.bitshares.BitShares bitshares_instance: BitShares
             instance
     """
     clear_cache()

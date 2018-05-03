@@ -1,8 +1,8 @@
 import unittest
 import mock
 from bitshares import BitShares
-from bitshares.message import Message
-from bitshares.instance import set_shared_bitshares_instance
+from onegram.message import Message
+from onegram.instance import set_shared_bitshares_instance
 
 wif = "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 core_unit = "PPY"

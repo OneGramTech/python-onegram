@@ -78,7 +78,7 @@ class BitShares(object):
         where ``<host>`` starts with ``ws://`` or ``wss://``.
 
         The purpose of this class it to simplify interaction with
-        BitShares.
+        onegram.
 
         The idea is to have a class that allows to do this:
 
@@ -197,8 +197,8 @@ class BitShares(object):
             :param string permission: The required permission for
                 signing (active, owner, posting)
             :param object append_to: This allows to provide an instance of
-                ProposalsBuilder (see :func:`bitshares.new_proposal`) or
-                TransactionBuilder (see :func:`bitshares.new_tx()`) to specify
+                ProposalsBuilder (see :func:`onegram.new_proposal`) or
+                TransactionBuilder (see :func:`onegram.new_tx()`) to specify
                 where to put a specific operation.
 
             ... note:: ``append_to`` is exposed to every method used in the
@@ -212,8 +212,8 @@ class BitShares(object):
                 posting permission. Neither can you use different
                 accounts for different operations!
 
-            ... note:: This uses ``bitshares.txbuffer`` as instance of
-                :class:`bitshares.transactionbuilder.TransactionBuilder`.
+            ... note:: This uses ``onegram.txbuffer`` as instance of
+                :class:`onegram.transactionbuilder.TransactionBuilder`.
                 You may want to use your own txbuffer
         """
         if "fee_asset" in kwargs:
@@ -225,8 +225,8 @@ class BitShares(object):
         if "append_to" in kwargs and kwargs["append_to"]:
             if self.proposer:
                 log.warn(
-                    "You may not use append_to and bitshares.proposer at "
-                    "the same time. Append bitshares.new_proposal(..) instead"
+                    "You may not use append_to and onegram.proposer at "
+                    "the same time. Append onegram.new_proposal(..) instead"
                 )
             # Append to the append_to and return
             append_to = kwargs["append_to"]
@@ -320,10 +320,10 @@ class BitShares(object):
     # -------------------------------------------------------------------------
     def newWallet(self, pwd):
         """ Create a new wallet. This method is basically only calls
-            :func:`bitshares.wallet.create`.
+            :func:`onegram.wallet.create`.
 
             :param str pwd: Password to use for the new wallet
-            :raises bitshares.exceptions.WalletExists: if there is already a
+            :raises onegram.exceptions.WalletExists: if there is already a
                 wallet created
         """
         return self.wallet.create(pwd)
@@ -1195,7 +1195,7 @@ class BitShares(object):
         """ Withdraw vesting balance
 
             :param str vesting_id: Id of the vesting object
-            :param bitshares.amount.Amount Amount: to withdraw ("all" if not
+            :param onegram.amount.Amount Amount: to withdraw ("all" if not
                 provided")
             :param str account: (optional) the account to allow access
                 to (defaults to ``default_account``)
@@ -1236,8 +1236,8 @@ class BitShares(object):
         """ Publish a price feed for a market-pegged asset
 
             :param str symbol: Symbol of the asset to publish feed for
-            :param bitshares.price.Price settlement_price: Price for settlement
-            :param bitshares.price.Price cer: Core exchange Rate (default
+            :param onegram.price.Price settlement_price: Price for settlement
+            :param onegram.price.Price cer: Core exchange Rate (default
                 ``settlement_price + 5%``)
             :param float mssr: Percentage for max short squeeze ratio (default:
                 110%)
@@ -1253,9 +1253,9 @@ class BitShares(object):
         assert mcr > 100
         assert mssr > 100
         assert isinstance(settlement_price, Price), \
-            "settlement_price needs to be instance of `bitshares.price.Price`!"
+            "settlement_price needs to be instance of `onegram.price.Price`!"
         assert cer is None or isinstance(cer, Price), \
-            "cer needs to be instance of `bitshares.price.Price`!"
+            "cer needs to be instance of `onegram.price.Price`!"
         if not account:
             if "default_account" in config:
                 account = config["default_account"]
@@ -1309,13 +1309,13 @@ class BitShares(object):
         """ Update the Core Exchange Rate (CER) of an asset
 
             :param str symbol: Symbol of the asset to publish feed for
-            :param bitshares.price.Price cer: Core exchange Rate
+            :param onegram.price.Price cer: Core exchange Rate
             :param str account: (optional) the account to allow access
                 to (defaults to ``default_account``)
 
         """
         assert isinstance(cer, Price), \
-            "cer needs to be instance of `bitshares.price.Price`!"
+            "cer needs to be instance of `onegram.price.Price`!"
         if not account:
             if "default_account" in config:
                 account = config["default_account"]
@@ -1370,7 +1370,7 @@ class BitShares(object):
 
             This removes the shares from the supply
 
-            :param bitshares.amount.Amount amount: The amount to be burned.
+            :param onegram.amount.Amount amount: The amount to be burned.
             :param str account: (optional) the account to allow access
                 to (defaults to ``default_account``)
         """
@@ -1410,7 +1410,7 @@ class BitShares(object):
             **Required**
 
             :param str name: Name of the worke
-            :param bitshares.amount.Amount daily_pay: The amount to be paid
+            :param onegram.amount.Amount daily_pay: The amount to be paid
                 daily
             :param datetime end: Date/time of end of the worker
 

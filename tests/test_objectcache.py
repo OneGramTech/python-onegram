@@ -1,8 +1,8 @@
 import time
 import unittest
 from bitshares import BitShares, exceptions
-from bitshares.instance import set_shared_bitshares_instance
-from bitshares.blockchainobject import ObjectCache
+from onegram.instance import set_shared_bitshares_instance
+from onegram.blockchainobject import ObjectCache
 
 
 class Testcases(unittest.TestCase):

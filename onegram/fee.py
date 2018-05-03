@@ -8,7 +8,7 @@ class OperationsFee(list):
     """ Obtain the fee associated with an actual operation
 
         :param list operations: list of operations as dictionary
-        :param bitshares.asset.Asset: Asset to pay fee in
+        :param onegram.asset.Asset: Asset to pay fee in
         :param bitshares blockchain_instance: BitShares() instance to use when
             accesing a RPC
     """

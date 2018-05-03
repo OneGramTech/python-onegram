@@ -1,5 +1,5 @@
 import json
-from bitshares.account import Account
+from onegram.account import Account
 from onegrambase import operations
 from onegrambase.asset_permissions import (
     asset_permissions,
@@ -17,7 +17,7 @@ class Asset(BlockchainObject):
         :param str Asset: Symbol name or object id of an asset
         :param bool lazy: Lazy loading
         :param bool full: Also obtain bitasset-data and dynamic asset data
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares
             instance
         :returns: All data of an asset
         :rtype: dict
@@ -333,9 +333,9 @@ class Asset(BlockchainObject):
             ... note:: This requires the ``override_authority`` to be
                        set for this asset!
 
-            :param bitshares.account.Account from_account: From this account
-            :param bitshares.account.Account to_account: To this account
-            :param bitshares.amount.Amount amount: Amount to seize
+            :param onegram.account.Account from_account: From this account
+            :param onegram.account.Account to_account: To this account
+            :param onegram.amount.Amount amount: Amount to seize
         """
 
         options = self["options"]
@@ -485,7 +485,7 @@ class Asset(BlockchainObject):
         """ Set trading percentage fee
 
             :param float percentage_fee: Percentage of fee
-            :param bitshares.amount.Amount max_market_fee: Max Fee
+            :param onegram.amount.Amount max_market_fee: Max Fee
 
         """
         assert percentage_fee <= 100 and percentage_fee > 0

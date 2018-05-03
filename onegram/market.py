@@ -12,9 +12,9 @@ from onegrambase import operations
 class Market(dict):
     """ This class allows to easily access Markets on the blockchain for trading, etc.
 
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares instance
-        :param bitshares.asset.Asset base: Base asset
-        :param bitshares.asset.Asset quote: Quote asset
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares instance
+        :param onegram.asset.Asset base: Base asset
+        :param onegram.asset.Asset quote: Quote asset
         :returns: Blockchain Market
         :rtype: dictionary with overloaded methods
 
@@ -25,7 +25,7 @@ class Market(dict):
         This class tries to identify **two** assets as provided in the
         parameters in one of the following forms:
 
-        * ``base`` and ``quote`` are valid assets (according to :class:`bitshares.asset.Asset`)
+        * ``base`` and ``quote`` are valid assets (according to :class:`onegram.asset.Asset`)
         * ``base:quote`` separated with ``:``
         * ``base/quote`` separated with ``/``
         * ``base-quote`` separated with ``-``
@@ -34,8 +34,8 @@ class Market(dict):
                   presented first (e.g. ``USD:BTS`` with ``USD`` being the
                   quote), while the ``base`` only refers to a secondary asset
                   for a trade. This means, if you call
-                  :func:`bitshares.market.Market.sell` or
-                  :func:`bitshares.market.Market.buy`, you will sell/buy **only
+                  :func:`onegram.market.Market.sell` or
+                  :func:`onegram.market.Market.buy`, you will sell/buy **only
                   quote** and obtain/pay **only base**.
 
     """
@@ -217,7 +217,7 @@ class Market(dict):
 
 
             .. note:: Each bid is an instance of
-                class:`bitshares.price.Order` and thus carries the keys
+                class:`onegram.price.Order` and thus carries the keys
                 ``base``, ``quote`` and ``price``. From those you can
                 obtain the actual amounts for sale
 
@@ -320,7 +320,7 @@ class Market(dict):
     def accountopenorders(self, account=None):
         """ Returns open Orders
 
-            :param bitshares.account.Account account: Account name or instance of Account to show orders for in this market
+            :param onegram.account.Account account: Account name or instance of Account to show orders for in this market
         """
         if not account:
             if "default_account" in self.blockchain.config:

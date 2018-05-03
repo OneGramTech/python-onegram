@@ -2,10 +2,10 @@ import unittest
 import mock
 from pprint import pprint
 from bitshares import BitShares
-from bitshares.account import Account
-from bitshares.amount import Amount
-from bitshares.asset import Asset
-from bitshares.instance import set_shared_bitshares_instance
+from onegram.account import Account
+from onegram.amount import Amount
+from onegram.asset import Asset
+from onegram.instance import set_shared_bitshares_instance
 from onegrambase.operationids import getOperationNameForId
 
 wif = "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"

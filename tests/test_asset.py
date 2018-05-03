@@ -1,8 +1,8 @@
 import unittest
 from bitshares import BitShares
-from bitshares.asset import Asset
-from bitshares.instance import set_shared_bitshares_instance
-from bitshares.exceptions import AssetDoesNotExistsException
+from onegram.asset import Asset
+from onegram.instance import set_shared_bitshares_instance
+from onegram.exceptions import AssetDoesNotExistsException
 
 
 class Testcases(unittest.TestCase):

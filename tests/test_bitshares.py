@@ -5,9 +5,9 @@ import random
 from pprint import pprint
 from bitshares import BitShares
 from onegrambase.operationids import getOperationNameForId
-from bitshares.amount import Amount
+from onegram.amount import Amount
 from onegrambase.account import PrivateKey
-from bitshares.instance import set_shared_bitshares_instance
+from onegram.instance import set_shared_bitshares_instance
 
 wif = "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 core_unit = "TEST"

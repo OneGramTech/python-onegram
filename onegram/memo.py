@@ -9,9 +9,9 @@ from .exceptions import MissingKeyError, KeyNotFound
 class Memo(object):
     """ Deals with Memos that are attached to a transfer
 
-        :param bitshares.account.Account from_account: Account that has sent the memo
-        :param bitshares.account.Account to_account: Account that has received the memo
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares instance
+        :param onegram.account.Account from_account: Account that has sent the memo
+        :param onegram.account.Account to_account: Account that has received the memo
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares instance
 
         A memo is encrypted with a shared secret derived from a private key of
         the sender and a public key of the receiver. Due to the underlying
@@ -21,7 +21,7 @@ class Memo(object):
 
         .. code-block:: python
 
-            from bitshares.memo import Memo
+            from onegram.memo import Memo
             m = Memo("bitshareseu", "wallet.xeroc")
             m.bitshares.wallet.unlock("secret")
             enc = (m.encrypt("foobar"))
@@ -34,7 +34,7 @@ class Memo(object):
 
         .. code-block:: python
 
-            from bitshares.memo import Memo
+            from onegram.memo import Memo
             m = Memo()
             m.bitshares.wallet.unlock("secret")
             print(memo.decrypt(op_data["memo"]))

@@ -8,7 +8,7 @@ class Blockchain(object):
     """ This class allows to access the blockchain and read data
         from it
 
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares
                  instance
         :param str mode: (default) Irreversible block (``irreversible``) or
                  actual head block (``head``)
@@ -246,7 +246,7 @@ class Blockchain(object):
             included into a block
 
             .. note:: If you want instant confirmation, you need to instantiate
-                      class:`bitshares.blockchain.Blockchain` with
+                      class:`onegram.blockchain.Blockchain` with
                       ``mode="head"``, otherwise, the call will wait until
                       confirmed in an irreversible block.
 

@@ -1,8 +1,8 @@
 import unittest
 from bitshares import BitShares
-from bitshares.amount import Amount
-from bitshares.asset import Asset
-from bitshares.instance import set_shared_bitshares_instance, SharedInstance
+from onegram.amount import Amount
+from onegram.asset import Asset
+from onegram.instance import set_shared_bitshares_instance, SharedInstance
 
 
 class Testcases(unittest.TestCase):

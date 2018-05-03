@@ -1,6 +1,6 @@
 class WalletExists(Exception):
     """ A wallet has already been created and requires a password to be
-        unlocked by means of :func:`bitshares.wallet.unlock`.
+        unlocked by means of :func:`onegram.wallet.unlock`.
     """
     pass
 
@@ -72,7 +72,7 @@ class BlockDoesNotExistsException(Exception):
 
 
 class NoWalletException(Exception):
-    """ No Wallet could be found, please use :func:`bitshares.wallet.create` to
+    """ No Wallet could be found, please use :func:`onegram.wallet.create` to
         create a new wallet
     """
     pass

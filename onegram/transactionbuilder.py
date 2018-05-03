@@ -23,9 +23,9 @@ class ProposalBuilder:
             supposed to expire
         :param int proposal_review: Number of seconds for review of the
             proposal
-        :param bitshares.transactionbuilder.TransactionBuilder: Specify
+        :param onegram.transactionbuilder.TransactionBuilder: Specify
             your own instance of transaction builder (optional)
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares
             instance
     """
     def __init__(

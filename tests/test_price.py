@@ -1,8 +1,8 @@
 from bitshares import BitShares
-from bitshares.instance import set_shared_bitshares_instance
-from bitshares.amount import Amount
-from bitshares.price import Price
-from bitshares.asset import Asset
+from onegram.instance import set_shared_bitshares_instance
+from onegram.amount import Amount
+from onegram.price import Price
+from onegram.asset import Asset
 import unittest
 
 

@@ -1,8 +1,8 @@
 import unittest
 from bitshares import BitShares, exceptions
-from bitshares.instance import set_shared_bitshares_instance
-from bitshares.account import Account
-from bitshares.committee import Committee
+from onegram.instance import set_shared_bitshares_instance
+from onegram.account import Account
+from onegram.committee import Committee
 
 
 class Testcases(unittest.TestCase):

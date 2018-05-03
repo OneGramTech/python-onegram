@@ -13,21 +13,21 @@ class Notify(Events):
     """ Notifications on Blockchain events.
 
         :param list accounts: Account names/ids to be notified about when changing
-        :param list markets: Instances of :class:`bitshares.market.Market` that identify markets to be monitored
+        :param list markets: Instances of :class:`onegram.market.Market` that identify markets to be monitored
         :param list objects: Object ids to be notified about when changed
         :param fnt on_tx: Callback that will be called for each transaction received
         :param fnt on_block: Callback that will be called for each block received
         :param fnt on_account: Callback that will be called for changes of the listed accounts
         :param fnt on_market: Callback that will be called for changes of the listed markets
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares instance
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares instance
 
         **Example**
 
         .. code-block:: python
 
             from pprint import pprint
-            from bitshares.notify import Notify
-            from bitshares.market import Market
+            from onegram.notify import Notify
+            from onegram.market import Market
 
             notify = Notify(
                 markets=["TEST:GOLD"],
@@ -126,9 +126,9 @@ class Notify(Events):
         """ This method is used for post processing of market
             notifications. It will return instances of either
 
-            * :class:`bitshares.price.Order` or
-            * :class:`bitshares.price.FilledOrder` or
-            * :class:`bitshares.price.UpdateCallOrder`
+            * :class:`onegram.price.Order` or
+            * :class:`onegram.price.FilledOrder` or
+            * :class:`onegram.price.UpdateCallOrder`
 
             Also possible are limit order updates (margin calls)
 
@@ -176,7 +176,7 @@ class Notify(Events):
 
     def process_account(self, message):
         """ This is used for processing of account Updates. It will
-            return instances of :class:bitshares.account.AccountUpdate`
+            return instances of :class:onegram.account.AccountUpdate`
         """
         self.on_account(AccountUpdate(
             message,

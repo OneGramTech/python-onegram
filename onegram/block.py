@@ -7,7 +7,7 @@ class Block(BlockchainObject):
     """ Read a single block from the chain
 
         :param int block: block number
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares
             instance
         :param bool lazy: Use lazy loading
 
@@ -17,7 +17,7 @@ class Block(BlockchainObject):
 
         .. code-block:: python
 
-            from bitshares.block import Block
+            from onegram.block import Block
             block = Block(1)
             print(block)
 

@@ -10,7 +10,7 @@ class Account(BlockchainObject):
     """ This class allows to easily access Account data
 
         :param str account_name: Name of the account
-        :param bitshares.bitshares.BitShares blockchain_instance: BitShares
+        :param onegram.bitshares.BitShares blockchain_instance: BitShares
                instance
         :param bool full: Obtain all account data including orders, positions, etc.
         :param bool lazy: Use lazy loading
@@ -18,7 +18,7 @@ class Account(BlockchainObject):
                etc.
         :returns: Account data
         :rtype: dictionary
-        :raises bitshares.exceptions.AccountDoesNotExistsException: if account
+        :raises onegram.exceptions.AccountDoesNotExistsException: if account
                 does not exist
 
         Instances of this class are dictionaries that come with additional
@@ -27,7 +27,7 @@ class Account(BlockchainObject):
 
         .. code-block:: python
 
-            from bitshares.account import Account
+            from onegram.account import Account
             account = Account("init0")
             print(account)
 
@@ -85,7 +85,7 @@ class Account(BlockchainObject):
     @property
     def balances(self):
         """ List balances of an account. This call returns instances of
-            :class:`bitshares.amount.Amount`.
+            :class:`onegram.amount.Amount`.
         """
         from .amount import Amount
         balances = self.blockchain.rpc.get_account_balances(self["id"], [])
@@ -96,7 +96,7 @@ class Account(BlockchainObject):
 
     def balance(self, symbol):
         """ Obtain the balance of a specific Asset. This call returns instances of
-            :class:`bitshares.amount.Amount`.
+            :class:`onegram.amount.Amount`.
         """
         from .amount import Amount
         if isinstance(symbol, dict) and "symbol" in symbol:
@@ -109,7 +109,7 @@ class Account(BlockchainObject):
 
     @property
     def call_positions(self):
-        """ Alias for :func:bitshares.account.Account.callpositions
+        """ Alias for :func:onegram.account.Account.callpositions
         """
         return self.callpositions()
 
@@ -228,7 +228,7 @@ class Account(BlockchainObject):
 
 class AccountUpdate(dict, BlockchainInstance):
     """ This purpose of this class is to keep track of account updates
-        as they are pushed through by :class:`bitshares.notify.Notify`.
+        as they are pushed through by :class:`onegram.notify.Notify`.
 
         Instances of this class are dictionaries and take the following
         form:
@@ -260,7 +260,7 @@ class AccountUpdate(dict, BlockchainInstance):
     @property
     def account(self):
         """ In oder to obtain the actual
-            :class:`bitshares.account.Account` from this class, you can
+            :class:`onegram.account.Account` from this class, you can
             use the ``account`` attribute.
         """
         account = Account(self["owner"], blockchain_instance=self.blockchain)
