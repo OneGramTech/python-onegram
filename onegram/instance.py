@@ -1,4 +1,4 @@
-import bitshares as bts
+import onegram as bts
 
 
 class BlockchainInstance():
