@@ -1,8 +1,8 @@
 from .account import Account
-from bitsharesbase.objects import Operation
-from bitsharesbase.account import PrivateKey, PublicKey
-from bitsharesbase.signedtransactions import Signed_Transaction
-from bitsharesbase import transactions, operations
+from onegrambase.objects import Operation
+from onegrambase.account import PrivateKey, PublicKey
+from onegrambase.signedtransactions import Signed_Transaction
+from onegrambase import transactions, operations
 from .exceptions import (
     InsufficientAuthorityError,
     MissingKeyError,

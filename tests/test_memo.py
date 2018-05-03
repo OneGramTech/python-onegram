@@ -2,8 +2,8 @@ import unittest
 import os
 from pprint import pprint
 from itertools import cycle
-from bitsharesbase.account import BrainKey, Address, PublicKey, PrivateKey
-from bitsharesbase.memo import (
+from onegrambase.account import BrainKey, Address, PublicKey, PrivateKey
+from onegrambase.memo import (
     get_shared_secret,
     _pad,
     _unpad,

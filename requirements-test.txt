@@ -1,4 +1,4 @@
-graphenelib
+onegramlib
 pycryptodome==3.4.6
 scrypt==0.7.1
 Events==0.2.2

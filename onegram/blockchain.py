@@ -1,7 +1,7 @@
 import time
 from .block import Block
 from .instance import BlockchainInstance
-from bitsharesbase.operationids import getOperationNameForId
+from onegrambase.operationids import getOperationNameForId
 
 
 class Blockchain(object):

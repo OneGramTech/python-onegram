@@ -6,7 +6,7 @@ from bitshares.account import Account
 from bitshares.amount import Amount
 from bitshares.asset import Asset
 from bitshares.instance import set_shared_bitshares_instance
-from bitsharesbase.operationids import getOperationNameForId
+from onegrambase.operationids import getOperationNameForId
 
 wif = "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 

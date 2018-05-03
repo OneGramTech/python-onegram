@@ -21,7 +21,7 @@ class PasswordKey(GPHPasswordKey):
     def __init__(self, *args, **kwargs):
         super(PasswordKey, self).__init__(*args, **kwargs)
 
-    # overloaded from GHPPasswordKey, JUST to set prefix='BTS' :(
+    # overloaded from GHPPasswordKey, JUST to set prefix='OGC' :(
     def get_private(self):
         """ Derive private key from the brain key and the current sequence
             number
@@ -56,7 +56,7 @@ class BrainKey(GPHBrainKey):
     def __init__(self, *args, **kwargs):
         super(BrainKey, self).__init__(*args, **kwargs)
 
-    # overloaded from GHPBrainKey, JUST to set prefix='BTS' :(
+    # overloaded from GHPBrainKey, JUST to set prefix='OGC' :(
     def get_private(self):
         """ Derive private key from the brain key and the current sequence
             number
@@ -86,16 +86,16 @@ class Address(GPHAddress):
 
         :param str address: Base58 encoded address (defaults to ``None``)
         :param str pubkey: Base58 encoded pubkey (defaults to ``None``)
-        :param str prefix: Network prefix (defaults to ``BTS``)
+        :param str prefix: Network prefix (defaults to ``OGC``)
 
         Example::
 
-           Address("BTSFN9r6VYzBK8EKtMewfNbfiGCr56pHDBFi")
+           Address("OGCFN9r6VYzBK8EKtMewfNbfiGCr56pHDBFi")
 
     """
     def __init__(self, *args, **kwargs):
         if "prefix" not in kwargs:
-            kwargs["prefix"] = "BTS"  # make prefix BTS
+            kwargs["prefix"] = "OGC"  # make prefix OGC
         super(Address, self).__init__(*args, **kwargs)
 
 
@@ -103,11 +103,11 @@ class PublicKey(GPHPublicKey):
     """ This class deals with Public Keys and inherits ``Address``.
 
         :param str pk: Base58 encoded public key
-        :param str prefix: Network prefix (defaults to ``BTS``)
+        :param str prefix: Network prefix (defaults to ``OGC``)
 
         Example:::
 
-           PublicKey("BTS6UtYWWs3rkZGV8JA86qrgkG6tyFksgECefKE1MiH4HkLD8PFGL")
+           PublicKey("OGC6UtYWWs3rkZGV8JA86qrgkG6tyFksgECefKE1MiH4HkLD8PFGL")
 
         .. note:: By default, graphene-based networks deal with **compressed**
                   public keys. If an **uncompressed** key is required, the
@@ -118,7 +118,7 @@ class PublicKey(GPHPublicKey):
     """
     def __init__(self, *args, **kwargs):
         if "prefix" not in kwargs:
-            kwargs["prefix"] = "BTS"  # make prefix BTS
+            kwargs["prefix"] = "OGC"  # make prefix OGC
         super(PublicKey, self).__init__(*args, **kwargs)
 
 
@@ -127,7 +127,7 @@ class PrivateKey(GPHPrivateKey):
         constructs two instances of ``PublicKey``:
 
         :param str wif: Base58check-encoded wif key
-        :param str prefix: Network prefix (defaults to ``BTS``)
+        :param str prefix: Network prefix (defaults to ``OGC``)
 
         Example:::
 
@@ -147,5 +147,5 @@ class PrivateKey(GPHPrivateKey):
     """
     def __init__(self, *args, **kwargs):
         if "prefix" not in kwargs:
-            kwargs["prefix"] = "BTS"  # make prefix BTS
+            kwargs["prefix"] = "OGC"  # make prefix OGC
         super(PrivateKey, self).__init__(*args, **kwargs)

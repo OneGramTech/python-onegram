@@ -53,7 +53,7 @@ def assets_from_string(text):
 
 def test_proposal_in_buffer(buf, operation_name, id):
     from .transactionbuilder import ProposalBuilder
-    from bitsharesbase.operationids import operations
+    from onegrambase.operationids import operations
     assert isinstance(buf, ProposalBuilder)
 
     operationid = operations.get(operation_name)

@@ -1,6 +1,6 @@
 import logging
 from events import Events
-from bitsharesapi.websocket import BitSharesWebsocket
+from onegramapi.websocket import BitSharesWebsocket
 from .instance import BlockchainInstance
 from .market import Market
 from .price import Order, FilledOrder, UpdateCallOrder

@@ -1,7 +1,7 @@
 import logging
 import os
 from graphenebase import bip38
-from bitsharesbase.account import PrivateKey, GPHPrivateKey
+from onegrambase.account import PrivateKey, GPHPrivateKey
 from .instance import BlockchainInstance
 from .account import Account
 from .exceptions import (
@@ -203,7 +203,7 @@ class Wallet():
     def _get_pub_from_wif(self, wif):
         """ Get the pubkey as string, from the wif key as string
         """
-        # it could be either graphenebase or bitsharesbase so we can't check
+        # it could be either graphenebase or onegrambase so we can't check
         # the type directly
         if isinstance(wif, PrivateKey) or isinstance(wif, GPHPrivateKey):
             wif = str(wif)

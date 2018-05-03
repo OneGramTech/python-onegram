@@ -1,9 +1,9 @@
 import logging
 
 from datetime import datetime, timedelta
-from bitsharesapi.bitsharesnoderpc import BitSharesNodeRPC
-from bitsharesbase.account import PublicKey
-from bitsharesbase import operations
+from onegramapi.bitsharesnoderpc import BitSharesNodeRPC
+from onegrambase.account import PublicKey
+from onegrambase import operations
 from .asset import Asset
 from .account import Account
 from .amount import Amount
@@ -499,7 +499,7 @@ class BitShares(object):
         """ Create new account on BitShares
 
             The brainkey/password can be used to recover all generated keys
-            (see `bitsharesbase.account` for more details.
+            (see `onegrambase.account` for more details.
 
             By default, this call will use ``default_account`` to
             register a new name ``account_name`` with all keys being
@@ -561,7 +561,7 @@ class BitShares(object):
         registrar = Account(registrar, blockchain_instance=self)
 
         " Generate new keys from password"
-        from bitsharesbase.account import PasswordKey, PublicKey
+        from onegrambase.account import PasswordKey, PublicKey
         if password:
             active_key = PasswordKey(account_name, password, role="active")
             owner_key = PasswordKey(account_name, password, role="owner")
@@ -1424,7 +1424,7 @@ class BitShares(object):
             :param str account: (optional) the account to allow access
                 to (defaults to ``default_account``)
         """
-        from bitsharesbase.transactions import timeformat
+        from onegrambase.transactions import timeformat
         assert isinstance(daily_pay, Amount)
         assert daily_pay["symbol"] == "BTS"
         if not begin:

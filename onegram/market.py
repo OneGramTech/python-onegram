@@ -6,7 +6,7 @@ from .asset import Asset
 from .amount import Amount
 from .price import Price, Order, FilledOrder
 from .account import Account
-from bitsharesbase import operations
+from onegrambase import operations
 
 
 class Market(dict):

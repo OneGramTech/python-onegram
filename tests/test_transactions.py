@@ -1,13 +1,13 @@
-from bitsharesbase import (
+from onegrambase import (
     transactions,
     memo,
     account,
     operations,
     objects
 )
-from bitsharesbase.objects import Operation
-from bitsharesbase.signedtransactions import Signed_Transaction
-from bitsharesbase.account import PrivateKey
+from onegrambase.objects import Operation
+from onegrambase.signedtransactions import Signed_Transaction
+from onegrambase.account import PrivateKey
 import random
 import unittest
 from pprint import pprint

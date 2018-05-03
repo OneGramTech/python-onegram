@@ -1,7 +1,7 @@
 import json
 from bitshares.account import Account
-from bitsharesbase import operations
-from bitsharesbase.asset_permissions import (
+from onegrambase import operations
+from onegrambase.asset_permissions import (
     asset_permissions,
     force_flag,
     test_permissions,

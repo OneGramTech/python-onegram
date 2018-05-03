@@ -1,7 +1,7 @@
 from .instance import BlockchainInstance
 import random
-from bitsharesbase import memo as BtsMemo
-from bitsharesbase.account import PrivateKey, PublicKey
+from onegrambase import memo as BtsMemo
+from onegrambase.account import PrivateKey, PublicKey
 from .account import Account
 from .exceptions import MissingKeyError, KeyNotFound
 

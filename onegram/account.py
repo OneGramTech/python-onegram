@@ -167,10 +167,10 @@ class Account(BlockchainObject):
             ... note::
                 only_ops and exclude_ops takes an array of strings:
                 The full list of operation ID's can be found in
-                bitsharesbase.operationids.
+                onegrambase.operationids.
                 Example: ['transfer', 'fill_order']
         """
-        from bitsharesbase.operations import getOperationNameForId
+        from onegrambase.operations import getOperationNameForId
         _limit = 100
         cnt = 0
 

@@ -11,24 +11,24 @@ except LookupError:
     ascii = codecs.lookup('ascii')
     codecs.register(lambda name, enc=ascii: {True: enc}.get(name == 'mbcs'))
 
-VERSION = '0.1.16'
+VERSION = '0.0.1'
 
 setup(
-    name='bitshares',
+    name='onegram',
     version=VERSION,
-    description='Python library for bitshares',
+    description='Python library for onegram',
     long_description=open('README.md').read(),
-    download_url='https://github.com/xeroc/python-bitshares/tarball/' + VERSION,
-    author='Fabian Schuh',
-    author_email='Fabian@chainsquad.com',
-    maintainer='Fabian Schuh',
-    maintainer_email='Fabian@chainsquad.com',
-    url='http://www.github.com/xeroc/python-bitshares',
-    keywords=['bitshares', 'library', 'api', 'rpc'],
+	download_url='https://gitlab.com/onegram-developers/python-onegram/-/archive/' + VERSION + '/python-onegram-' + VERSION + '.zip',
+    author='Frantisek Horvath',
+    author_email='frantisek.horvath@01cryptohouse.com',
+    maintainer='Frantisek Horvath',
+    maintainer_email='frantisek.horvath@01cryptohouse.com',
+    url='https://gitlab.com/onegram-developers/python-onegram',
+    keywords=['onegram', 'library', 'api', 'rpc'],
     packages=[
-        "bitshares",
-        "bitsharesapi",
-        "bitsharesbase"
+        "onegram",
+        "onegramapi",
+        "onegrambase"
     ],
     classifiers=[
         'License :: OSI Approved :: MIT License',
@@ -40,7 +40,7 @@ setup(
         'Topic :: Office/Business :: Financial',
     ],
     install_requires=[
-        "graphenelib>=0.6.1",
+        "onegramlib>=1.0.3",
         "websockets",
         "appdirs",
         "Events",
@@ -50,4 +50,5 @@ setup(
     setup_requires=['pytest-runner'],
     tests_require=['pytest'],
     include_package_data=True,
+    zip_safe=True,
 )

@@ -1,6 +1,6 @@
 import unittest
 from bitshares import BitShares
-from bitsharesbase import operations
+from onegrambase import operations
 from bitshares.instance import set_shared_bitshares_instance
 
 wif = "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"

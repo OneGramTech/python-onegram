@@ -1,7 +1,7 @@
 import re
 from grapheneapi.graphenewsrpc import GrapheneWebsocketRPC
 from grapheneapi.graphenehttprpc import GrapheneHTTPRPC
-from bitsharesbase.chains import known_chains
+from onegrambase.chains import known_chains
 from . import exceptions
 import logging
 log = logging.getLogger(__name__)

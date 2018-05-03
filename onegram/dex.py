@@ -4,7 +4,7 @@ from .account import Account
 from .asset import Asset
 from .amount import Amount
 from .price import Price
-from bitsharesbase import operations
+from onegrambase import operations
 
 
 class Dex(BlockchainInstance):
@@ -37,7 +37,7 @@ class Dex(BlockchainInstance):
                 'committee_member_create': {'fee': 100000000.0}}
 
         """
-        from bitsharesbase.operations import operations
+        from onegrambase.operations import operations
         r = {}
         obj, base = self.blockchain.rpc.get_objects(["2.0.0", "1.3.0"])
         fees = obj["parameters"]["current_fees"]["parameters"]

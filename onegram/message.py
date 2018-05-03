@@ -2,7 +2,7 @@ import re
 import logging
 from binascii import hexlify, unhexlify
 from graphenebase.ecdsa import verify_message, sign_message
-from bitsharesbase.account import PublicKey
+from onegrambase.account import PublicKey
 from .instance import BlockchainInstance
 from .account import Account
 from .exceptions import InvalidMessageSignature
