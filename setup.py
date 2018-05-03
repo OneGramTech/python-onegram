@@ -26,7 +26,7 @@ setup(
     url='https://gitlab.com/onegram-developers/python-onegram',
     keywords=['onegram', 'library', 'api', 'rpc'],
     packages=[
-        "onegram",
+        "onegramcoin",
         "onegramapi",
         "onegrambase"
     ],
