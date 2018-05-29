@@ -11,7 +11,7 @@ except LookupError:
     ascii = codecs.lookup('ascii')
     codecs.register(lambda name, enc=ascii: {True: enc}.get(name == 'mbcs'))
 
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 
 setup(
     name='onegramcoin',
@@ -40,7 +40,7 @@ setup(
         'Topic :: Office/Business :: Financial',
     ],
     install_requires=[
-        "onegramlib>=1.0.4",
+        "onegramlib>=1.0.5",
         "websockets",
         "appdirs",
         "Events",
