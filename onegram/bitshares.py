@@ -124,7 +124,7 @@ class BitShares(object):
         self.offline = bool(kwargs.get("offline", False))
         self.nobroadcast = bool(kwargs.get("nobroadcast", False))
         self.unsigned = bool(kwargs.get("unsigned", False))
-        self.expiration = int(kwargs.get("expiration", 30))
+        self.expiration = int(kwargs.get("expiration", 60 * 60))
         self.bundle = bool(kwargs.get("bundle", False))
         self.blocking = kwargs.get("blocking", False)
 
